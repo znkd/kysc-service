@@ -2,8 +2,7 @@
 
 from flask import Flask
 from flask_restful import Api, Resource
-import urllib2
-import urllib
+import requests
 
 
 class Login(Resource):
@@ -12,7 +11,9 @@ class Login(Resource):
 
 class User(Resource):
     def get(self):
-        return 'hello world'
+        r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
+        print(r.status_code)
+        return 'hello user'
 
 
 if __name__ == "__main__":
