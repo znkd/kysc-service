@@ -1,6 +1,10 @@
 
-from main import app
+
+from flask import Flask
 from flask_restful import Api, Resource
+import urllib2
+import urllib
+
 
 class Login(Resource):
     def post(self):
@@ -11,9 +15,8 @@ class User(Resource):
         return 'hello world'
 
 
-api = Api(app)
-api.add_resource(User, '/hello')
-api.add_resource(Login, '/sns/login')
-
 if __name__ == "__main__":
+    app = Flask(__name__)
+    api = Api(app)
+    api.add_resource(User, '/user')
     app.run(debug=True)
