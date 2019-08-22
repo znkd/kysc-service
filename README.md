@@ -30,4 +30,4 @@ sudo yum -y install python-pip
 * sudo pip install requests
 
 ## 安装itsdangerous
-* pip install itsdangerous
+* sudo pip install itsdangerous
