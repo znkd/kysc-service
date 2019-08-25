@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Flask(env)",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "stopOnEntry": false,
+            "pythonPath": "/Users/zhangnan/Documents/MyProjects/python_env/bin/python",
+            "program": "/Users/zhangnan/Documents/MyProjects/kysc-service/main.py",
+            "env": {
+                "FLASK_APP": "/Users/zhangnan/Documents/MyProjects/kysc-service/main.py",
+                "FLASK_ENV": "development",
+                "FLASK_DEBUG": "0"
+            },
+            "args": [
+                "run",
+                "--no-debugger",
+                "--no-reload"
+            ],
+            "jinja": true
+        }
+    ]
+}

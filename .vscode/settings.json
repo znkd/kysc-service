@@ -1,5 +1,7 @@
 {
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
-    "python.pythonPath": "/usr/bin/python"
+    "python.venvPath": "/Users/zhangnan/Documents/MyProjects/python_env",
+    "python.pythonPath": "/Users/zhangnan/Documents/MyProjects/python_env/bin/python"
+    //"python.pythonPath": "/usr/bin/python"
 }

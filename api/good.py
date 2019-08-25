@@ -28,6 +28,29 @@ class List(Resource):
         good = self.db['good']
         return {'message':'成功', 'data':json_util.dumps(good.find({'id': { '$in': ids }}, {'_id':0}))}, 200
 
+class Detail(Resource):
+    def __init__(self):
+        self.parser = reqparse.RequestParser()
+        self.parser.add_argument('cat_id', type=str)
+        self.db = client["main"]
+        self.good_id = -1
+        self.title = "title"
+        self.subtitle = "subtitle"
+        self.moneytype = 0
+        self.goodpricecomment = "商品价格描述"
+        self.goodimageurl = "" 
+        super(Detail, self).__init__()
+        pass
+
+    def get(self):
+        goods_id = 1
+        if goods_id == -1:
+            return ''
+
+        good_detail_table = self.db['good_detail']
+        single_good_detail = good_detail_table.find_one({'id':goods_id})
+        single_goodJSON = json.loads(json_util.dumps(single_good_detail))
+        return single_goodJSON
 
 if __name__ == "__main__":
     app = Flask(__name__)
