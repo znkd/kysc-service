@@ -55,6 +55,7 @@ class Detail(Resource):
         return single_goodJSON
 
 if __name__ == "__main__":
+    #使用 curl http://localhost:5000/good/detail -d "id=22"
     app = Flask(__name__)
     api = Api(app)
     api.add_resource(List, 'good/list')
